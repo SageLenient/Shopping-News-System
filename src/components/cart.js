@@ -22,9 +22,9 @@ class Cart extends React.Component{
             )
         }
         for(let i=0;i<carts.length;i++){
-            jsx.push(<li key={i}><img src={carts[i].img}/><span>{carts[i].title}</span>
-            　　<i>数量{carts[i].quantity}</i>　　<i>单价￥{carts[i].price.number}</i>　　
-            <em>共￥{carts[i].subTotal}</em>　　<a onClick={()=>this.deleteList(carts[i])} className="btn btn-danger">删除</a></li>)
+            jsx.push(<li key={i} style={{position:'relative'}}><img src={carts[i].img}/><h2 style={{display:'inline-block'}}>　　{carts[i].title}</h2><br/>
+            　　<div style={{position:'absolute',right:25,bottom:25}}><i>数量　{carts[i].quantity}</i>　　<i>单价　￥{carts[i].price.number}</i>　　
+            <em>共　￥{carts[i].subTotal}</em>　　<a onClick={()=>this.deleteList(carts[i])} className="btn btn-danger">删除</a></div><hr/></li>)
         };
         return jsx;
     }

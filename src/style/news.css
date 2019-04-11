@@ -1,5 +1,6 @@
 .news .news-list{
-    border: 1px solid black
+    padding: 25px 15px;
+    border-left: #ccc solid 1px
 }
 .news .news-list h2{
     vertical-align: top;

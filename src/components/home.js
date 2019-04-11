@@ -23,11 +23,11 @@ class Home extends React.Component{
       if(this.props.listNews.length>0){
         var lists=this.props.listNews;
         var arr=[];
-        for(var i=0;i<4;i++){
+        for(var i=0;i<6;i++){
             var num=this.numRandom(0,79);
             if(arr.indexOf(num)==-1){
               arr.push(num);
-              jsx.push(<NavLink key={num} to={`/news/${num}`}><div className='col-md-6 news-list'><img src={lists[num].img}/><h2>{lists[num].title}</h2></div></NavLink>)
+              jsx.push(<NavLink key={num} to={`/news/${num}`}><div className='col-md-4 news-list'><img src={lists[num].img}/><h2>{lists[num].title}</h2></div></NavLink>)
             }else{
               i--
             }
