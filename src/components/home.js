@@ -44,7 +44,7 @@ class Home extends React.Component{
             var num=this.numRandom(0,79);
             if(arr.indexOf(num)==-1){
               arr.push(num);
-              jsx.push(<div className='col-md-6 news-list'><NavLink key={num} to={`/product/${num}`}><img src={lists[num].img}/><h2>{lists[num].title}</h2></NavLink></div>)
+              jsx.push(<div className='col-md-6 news-list'  key={num}><NavLink to={`/product/${num}`}><img src={lists[num].img}/><h2>{lists[num].title}</h2></NavLink></div>)
             }else{
               i--
             }
@@ -66,19 +66,19 @@ class Home extends React.Component{
                 </ol>
                 <div className="carousel-inner" role="listbox">
                   <div className="item active">
-                    <img src="http://pic1.win4000.com/wallpaper/7/57ac3605353a8.jpg" style={{width:'100%',height:'400px'}} alt="..." />
+                    <img src="http://img.mp.sohu.com/upload/20170721/b871bf91cae84b06a5b4529f936ecc7e_th.png" style={{width:'100%',height:'400px'}} alt="..." />
                     <div className="carousel-caption">
 
                     </div>
                   </div>
                   <div className="item">
-                    <img src="http://image4.cnpp.cn/upload/images/20141224/17020337126_1920x1080.jpg" style={{width:'100%',height:'400px'}} alt="..." />
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554984520563&di=c8272b9f8d3d4ede7738756a83438168&imgtype=0&src=http%3A%2F%2Fbpic.ooopic.com%2F15%2F20%2F49%2F15204987-4ba980f6f44f241c5d284e1175de8e2e.jpg" style={{width:'100%',height:'400px'}} alt="..." />
                     <div className="carousel-caption">
 
                     </div>
                   </div>
                   <div className="item">
-                    <img src="http://pic1.win4000.com/wallpaper/7/57ac3605353a8.jpg" style={{width:'100%',height:'400px'}} alt="..." />
+                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554984625249&di=b9423e180858deca319bc4cb737bd126&imgtype=0&src=http%3A%2F%2Fbpic.ooopic.com%2F15%2F97%2F14%2F15971477-018654b3f448795db79d3191a0233d0a.jpg" style={{width:'100%',height:'400px'}} alt="..." />
                     <div className="carousel-caption">
 
                     </div>
@@ -95,8 +95,10 @@ class Home extends React.Component{
               </div>
           </div>
           <div><h2 style={{textIndent:20}}>新闻推荐</h2><hr/>{this.showNews()}</div><br/>
-          <div><hr/><h2 style={{textIndent:20}}>产品推荐</h2><hr/>{this.showProduct()}</div>
-        </div>
+          <img src='http://pcs4.clubstatic.lenovo.com.cn/data/attachment/forum/201601/29/090021fdia22ac2utuuxxt.jpg' style={{width:"100%"}}/>
+          <div><h2 style={{textIndent:20}}>产品推荐</h2><hr/>{this.showProduct()}</div>
+          <img src='http://pcs4.clubstatic.lenovo.com.cn/data/attachment/forum/201601/29/090021fdia22ac2utuuxxt.jpg' style={{width:"100%"}}/>          
+          </div>
         )
     }
 }
