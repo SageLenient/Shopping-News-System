@@ -1,0 +1,21 @@
+a{
+    text-decoration: none
+}
+.product .product-li{
+    margin:5px auto;
+    padding: 0 5px 15px
+}
+.product .product-li img{
+    max-width: 100%;
+    height: auto;
+}
+.product .product-li h2{
+    display: inline-block;
+    text-indent: 20px
+}
+.product .product-li{
+    border: 1px solid black
+}
+.product .product-li p{
+    margin-top: 40px
+}

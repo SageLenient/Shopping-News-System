@@ -1,0 +1,11 @@
+.Detail{
+    padding:20px
+}
+.Detail .np-content img{
+    display: block;
+    width: 80%;
+    margin: 0 auto
+}
+.Detail .comment{
+    text-align: right
+}
