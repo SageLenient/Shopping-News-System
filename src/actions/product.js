@@ -3,7 +3,7 @@ var gUrl='http://localhost:3000/';
 
 export const getListData=(data)=>{
     return {
-        type:'GETDATA',
+        type:'GET_PRODUCT_DATA',
         payload:data
     }
 }

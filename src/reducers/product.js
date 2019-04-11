@@ -5,7 +5,7 @@ const originState={list:[],total:0};
 
 function reducer(state = originState,action){
     switch(action.type){
-        case 'GETDATA':
+        case 'GET_PRODUCT_DATA':
             return Object.assign({...state,list:action.payload.list,total:action.payload.total})
         default: 
             return state;

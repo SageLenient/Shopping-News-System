@@ -27,6 +27,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "async": "^2.6.2",
     "axios": "^0.18.0",
     "faker": "^4.1.0",
     "lodash": "^4.17.11",

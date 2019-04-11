@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { resData } from '../actions/news';
-// import { resData1 } from '../actions/product';
+import { resData1 } from '../actions/product';
 import {NavLink} from 'react-router-dom';
 const mapStateToProps = state=>{
     return {
@@ -16,7 +16,7 @@ class Home extends React.Component{
     }
     componentDidMount(){
       this.props.resData();
-      // this.props.resData1();
+      this.props.resData1();
     }
     showNews(){//新闻列表
       var jsx = [];
@@ -35,10 +35,28 @@ class Home extends React.Component{
         return jsx;
       }
     }
+    showProduct(){//新闻列表
+      var jsx = [];
+      if(this.props.listProduct.length>0){
+        var lists=this.props.listProduct;
+        var arr=[];
+        for(var i=0;i<4;i++){
+            var num=this.numRandom(0,79);
+            if(arr.indexOf(num)==-1){
+              arr.push(num);
+              jsx.push(<div className='col-md-6 news-list'><NavLink key={num} to={`/product/${num}`}><img src={lists[num].img}/><h2>{lists[num].title}</h2></NavLink></div>)
+            }else{
+              i--
+            }
+        };
+        return jsx;
+      }
+    }
     render(){
+      // console.log(this.)
         return (
         <div>  
-          <div>
+          <div style={{overflow:'hidden'}}>
               
               <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
@@ -76,10 +94,11 @@ class Home extends React.Component{
                 </a>
               </div>
           </div>
-          <div><h2 style={{textIndent:20}}>新闻推荐</h2><hr/>{this.showNews()}</div>
+          <div><h2 style={{textIndent:20}}>新闻推荐</h2><hr/>{this.showNews()}</div><br/>
+          <div><hr/><h2 style={{textIndent:20}}>产品推荐</h2><hr/>{this.showProduct()}</div>
         </div>
         )
     }
 }
-const HomeContainer=connect(mapStateToProps,{resData})(Home)
+const HomeContainer=connect(mapStateToProps,{resData,resData1})(Home)
 export default HomeContainer
