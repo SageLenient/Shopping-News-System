@@ -21,7 +21,7 @@ class News extends React.Component{
         }
     render(){
         return(
-            <div className='row news'>
+            <div className='row news wrap'>
                 {this.showNews()}
             </div>
         )

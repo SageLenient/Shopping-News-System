@@ -50,8 +50,8 @@ class Cart extends React.Component{
     render(){
         const {cart}=this.props;
         return(
-            <div>
-                <div className="wrap">
+            <div className="wrap">
+                <div>
                     <div className="cart-title">
                         <h3>我的购物车</h3>
                         <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>

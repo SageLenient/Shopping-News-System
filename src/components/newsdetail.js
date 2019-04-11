@@ -69,7 +69,7 @@ class Detail extends Component{
     render(){
         var liData=this.state.list;
         return(
-            <div className='Detail'>
+            <div className='Detail wrap'>
                 <h1>新闻提要:{liData.title}</h1>
                 <div className='np-content'>
                     <img src={liData.img}/>

@@ -55,7 +55,7 @@ class Home extends React.Component{
     render(){
       // console.log(this.)
         return (
-        <div>  
+        <div className='wrap'>  
           <div style={{overflow:'hidden'}}>
               
               <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">

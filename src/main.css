@@ -1,5 +1,6 @@
-body{
-    /* background: url(./assets/bg1.jpg); */
+.wrap{
+    width: 90%;
+    margin: 5% auto
 }
 li{
     list-style: none;
