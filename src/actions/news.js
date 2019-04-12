@@ -1,5 +1,5 @@
 import axios from 'axios';
-var gUrl='http://localhost:3000/';
+var gUrl='http://211.159.182.250:3002/';
 
 export const getListData=(data)=>{
     return {

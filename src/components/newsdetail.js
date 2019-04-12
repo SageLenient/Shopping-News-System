@@ -19,7 +19,7 @@ class Detail extends Component{
     }
     componentDidMount(){
         axios({
-            url:`http://localhost:3000/news/${this.props.match.params.id}`,
+            url:`http://211.159.182.250:3002/news/${this.props.match.params.id}`,
             method:'get'
         }).then(res=>{
             this.setState({
